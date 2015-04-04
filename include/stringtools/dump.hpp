@@ -47,15 +47,6 @@ struct Dump<bool>
     }
 };
 
-template<>
-struct Dump<std::string>
-{
-    static void to_string(std::string& output,std::string const& s)
-    {
-        output += "\"" + s + "\"";
-    }
-};
-
 template<typename T,typename T2>
 struct Dump<std::pair<T,T2>>
 {
